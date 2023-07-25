@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+/* --Transparent-white (paragraphs): hsla(0, 0%, 100%, 0.75)
+--Very-light-gray (background, headings, buttons): hsl(0, 0%, 95%) */
+*{
+  padding: 0;margin: 0;box-sizing: border-box;
+}
+
+
+:root{
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan:hsl(179, 100%, 13%);
+--f-family-400:'Lexend Deca', sans-serif;
+--f-family-700:'Big Shoulders Display',cursive;
+
+--f-size:15px;
+
+--Transparent-white-para: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-bac-heading-buttons : hsl(0, 0%, 95%);
+}
+html{
+  height: 100vh;
+}
+
+body{
+  font-size: var(--f-size);
+  background-color: var(--Very-light-gray-bac-heading-buttons);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1.5rem;
+
+
+
+}
+.mainCradSectionContainer{
+  width: 910px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* =========================Paras and Headings Css================== */
+.paragraphContainer{
+  color:var(--Transparent-white-para);
+  font-family: var(--f-family-400);
+  font-weight: 400; 
+
+}
+.heading{
+  color:var(--Very-light-gray-bac-heading-buttons);
+  font-family: var(--f-family-700);
+  font-weight: 700;
+  padding-bottom: 1.3rem;
+  font-size: 2rem;
+  text-transform:uppercase;
+
+}
+
+
+.cardContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+  max-width: 100%;
+}
+
+#sedanSectionContainer{
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+}
+#suvsSectionContainer{
+  background-color: var(--Dark-cyan);
+
+}
+#luxurySectionContainer{
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+
+
+
+.Button{
+  text-align: center;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 1.2rem;  
+  border: 2px solid var(--Very-light-gray-bac-heading-buttons);
+  background-color: var(--Very-light-gray-bac-heading-buttons);
+  font-family: var(--f-family-400);
+  font-weight: 400;
+
+}
+#sedanButton{
+  color:var(--Bright-orange);
+}
+#suvusButton{
+  color:var(--Dark-cyan);
+
+
+}
+#luxuryButton{
+  color:var(--Very-dark-cyan);
+
+}
+.Button:hover{
+  cursor: pointer;
+  background: transparent;
+  color:var(--Very-light-gray-bac-heading-buttons) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+@media screen  and (max-width:880px) {
+  html{
+    height: 235vh;
+  }
+  #sedanSectionContainer{
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+  #luxurySectionContainer{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+
+  
+}
+
